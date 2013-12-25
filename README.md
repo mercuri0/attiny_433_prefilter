@@ -27,7 +27,7 @@ calculate fuses:
 pinout:
 
 name       |       RPI       | ATTINY45 | 433RECEIVER
-           |                 |          |
+-------------------------------------------------------
 MOSI       |       19        |    5     |      -
 MISO       |       21        |    6     |      -
 SCK        |       23        |    7     |      -
