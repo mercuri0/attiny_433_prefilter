@@ -26,7 +26,7 @@ calculate fuses:
 
 pinout:
 
-|  name  |       RPI       | ATTINY45 | 433RECEIVER |
+|  Name  | Raspberry Pi V2 | Attiny45 | 433 Receiver|
 |--------|-----------------|----------|-------------|
 |  MOSI  |       19        |    5     |      -      |
 |  MISO  |       21        |    6     |      -      |
