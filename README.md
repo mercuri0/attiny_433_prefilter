@@ -1,24 +1,25 @@
-433 rf filter
+433 RF Filter
 =============
 
+this is an rf receiver prefilter for the raspberry build with an attiny45. it prefilters the received signal to reduce the load for the raspberry that can i.e. run pilight (http://www.pilight.org).
 you be warned: this could potentionally damage your raspberry pi and also other hardware. i take no responsability for anny damages! try at your own risk!
 
-install avrgcc:
+Install avrgcc:
 ---------------
 	sudo apt-get install gcc-avr avr-libc
 
-install modified avrdude:
+Install modified avrdude:
 -------------------------
 	wget http://project-downloads.drogon.net/files/avrdude_5.10-4_armhf.deb
 	wget http://project-downloads.drogon.net/files/avrdude-doc_5.10-4_all.deb
 	sudo dpkg -i avrdude_5.10-4_armhf.deb
 	sudo dpkg -i avrdude-doc_5.10-4_all.deb
 	
-compile and program attiny:
+Compile and program attiny:
 ---------------------------
 	make all
 	
-additional info:
+Additional info:
 ----------------
 calculate fuses:
 	http://www.engbedded.com/fusecalc/
