@@ -7,19 +7,23 @@ install avrgcc:
 ---------------
 	sudo apt-get install gcc-avr avr-libc
 
-2) install modified avrdude:
+install modified avrdude:
+-------------------------
 	wget http://project-downloads.drogon.net/files/avrdude_5.10-4_armhf.deb
 	wget http://project-downloads.drogon.net/files/avrdude-doc_5.10-4_all.deb
 	sudo dpkg -i avrdude_5.10-4_armhf.deb
 	sudo dpkg -i avrdude-doc_5.10-4_all.deb
-
-3) compile and program attiny:
+	
+compile and program attiny:
+---------------------------
 	make all
-
-*)calculate fuses:
+	
+additional info:
+----------------
+calculate fuses:
 	http://www.engbedded.com/fusecalc/
 
-*)pinout:
+pinout:
 
 name       |       RPI       | ATTINY45 | 433RECEIVER
            |                 |          |
@@ -31,7 +35,7 @@ PI_IN      | see pilight cfg |    3     |      -
 REC_OUT    |       -         |    2     |   DATA_OUT
 
 
-*) to change the pins create an .avrduderc file in your home directory containing (the numbering is wiringpi numbering!):
+to change the pins create an .avrduderc file in your home directory containing (the numbering is wiringpi numbering!):
 
 programmer
   id    = "gpio";
