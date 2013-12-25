@@ -26,14 +26,14 @@ calculate fuses:
 
 pinout:
 
-name       |       RPI       | ATTINY45 | 433RECEIVER
--------------------------------------------------------
-MOSI       |       19        |    5     |      -
-MISO       |       21        |    6     |      -
-SCK        |       23        |    7     |      -
-RESET      |       24        |    1     |      -
-PI_IN      | see pilight cfg |    3     |      -
-REC_OUT    |       -         |    2     |   DATA_OUT
+|  name  |       RPI       | ATTINY45 | 433RECEIVER |
+|--------|-----------------|----------|-------------|
+|  MOSI  |       19        |    5     |      -      |
+|  MISO  |       21        |    6     |      -      |
+|  SCK   |       23        |    7     |      -      |
+| RESET  |       24        |    1     |      -      |
+| PI_IN  | see pilight cfg |    3     |      -      |
+|REC_OUT |       -         |    2     |   DATA_OUT  |
 
 
 to change the pins create an .avrduderc file in your home directory containing (the numbering is wiringpi numbering!):
