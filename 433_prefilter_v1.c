@@ -31,8 +31,8 @@
 #define PI_IN 3
 
 //counter counts in 10us steps => pulselength/10 !!, be aware of that we don't use a crystal => add some tollerance (±5%)
-#define MIN_PULSELENGTH 15			// tested to work down to 30us pulsewidth (=2)
-#define MAX_PULSELENGTH 1800
+#define MIN_PULSELENGTH 10			// tested to work down to 30us pulsewidth (=2)
+#define MAX_PULSELENGTH 1600
 
 volatile uint16_t ten_us_counter = 0;		//counts in 10us steps
 volatile uint8_t valid_buffer = 0x00;		//if 8 bit in a row are valid the pulsestream is accepted as valid
