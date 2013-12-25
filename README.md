@@ -1,8 +1,10 @@
+433 rf filter
+=============
+
 you be warned: this could potentionally damage your raspberry pi and also other hardware. i take no responsability for anny damages! try at your own risk!
 
-433 rf filter howto:
-
-1) install avrgcc:
+install avrgcc:
+---------------
 	sudo apt-get install gcc-avr avr-libc
 
 2) install modified avrdude:
