@@ -21,10 +21,10 @@ you be warned: this could potentionally damage your raspberry pi and also other 
 	
 Additional info:
 ----------------
-calculate fuses:
+###Calculate fuses:
 	http://www.engbedded.com/fusecalc/
 
-pinout:
+###Pinout:
 
 |  Name  | Raspberry Pi V2 | Attiny45 | 433 Receiver|
 |--------|-----------------|----------|-------------|
