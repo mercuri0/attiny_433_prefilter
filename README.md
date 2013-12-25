@@ -4,19 +4,19 @@
 this is an rf receiver prefilter for the raspberry build with an attiny45. it prefilters the received signal to reduce the load for the raspberry that can i.e. run pilight (http://www.pilight.org).
 you be warned: this could potentionally damage your raspberry pi and also other hardware. i take no responsability for anny damages! try at your own risk!
 
-Install avrgcc:
----------------
+1. Install avrgcc:
+------------------
 	sudo apt-get install gcc-avr avr-libc
 
-Install modified avrdude:
--------------------------
+2. Install modified avrdude:
+----------------------------
 	wget http://project-downloads.drogon.net/files/avrdude_5.10-4_armhf.deb
 	wget http://project-downloads.drogon.net/files/avrdude-doc_5.10-4_all.deb
 	sudo dpkg -i avrdude_5.10-4_armhf.deb
 	sudo dpkg -i avrdude-doc_5.10-4_all.deb
 	
-Compile and program attiny:
----------------------------
+3. Compile and program attiny:
+------------------------------
 	make all
 	
 Additional info:
@@ -37,8 +37,8 @@ pinout:
 
 
 to change the pins create an .avrduderc file in your home directory containing (the numbering is wiringpi numbering!):
-<code>
-programmer
+
+'''programmer
   id    = "gpio";
   desc  = "Use sysfs interface to bitbang GPIO lines";
   type  = gpio;
@@ -46,5 +46,4 @@ programmer
   sck   = 11;
   mosi  = 10;
   miso  = 9;
-;
-</code>
+;'''
