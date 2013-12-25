@@ -37,7 +37,7 @@ pinout:
 
 
 to change the pins create an .avrduderc file in your home directory containing (the numbering is wiringpi numbering!):
-
+<code>
 programmer
   id    = "gpio";
   desc  = "Use sysfs interface to bitbang GPIO lines";
@@ -47,3 +47,4 @@ programmer
   mosi  = 10;
   miso  = 9;
 ;
+</code>
