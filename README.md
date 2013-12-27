@@ -26,9 +26,9 @@ you be warned: this could potentionally damage your raspberry pi and also other 
 ------------------------------
 	make all
 	
-i
 
-:eAdditional info:
+
+Additional info:
 ----------------
 ###Calculate fuses:
 	http://www.engbedded.com/fusecalc/
