@@ -9,17 +9,26 @@ you be warned: this could potentionally damage your raspberry pi and also other 
 	sudo apt-get install gcc-avr avr-libc
 
 2. Install modified avrdude:
-----------------------------
+-------------------
 	wget http://project-downloads.drogon.net/files/avrdude_5.10-4_armhf.deb
 	wget http://project-downloads.drogon.net/files/avrdude-doc_5.10-4_all.deb
 	sudo dpkg -i avrdude_5.10-4_armhf.deb
 	sudo dpkg -i avrdude-doc_5.10-4_all.deb
+
+3. Calculate the MIN_PULSELENGTH and MAX_PULSELENGTH values
+-------------------
+	MIN_PULSELENGTH =  ( shortest expected pulse - 10% ) / 10
+	MAX_PULSELENGTH =  ( longest expected pulse + 10% ) / 10
 	
-3. Compile and program attiny:
+	the shortest expected pulse is the minimal base pulse-width of all your protocols, the longest expected pulse is the maximal base pulse-width of all your protocols multiplied by 34
+	
+4. Compile and program attiny:
 ------------------------------
 	make all
 	
-Additional info:
+i
+
+:eAdditional info:
 ----------------
 ###Calculate fuses:
 	http://www.engbedded.com/fusecalc/
