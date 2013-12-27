@@ -31,6 +31,12 @@
 #define PI_IN 3
 
 //counter counts in 10us steps => pulselength/10 !!, be aware of that we don't use a crystal => add some tollerance (±5%)
+//MIN_PULSELENGTH =  ( shortest expected pulse - 10% ) / 10
+//MAX_PULSELENGTH =  ( longest expected pulse + 10% ) / 10
+//
+//the shortest expected pulse is the minimal base pulse-width of all your protocols
+//the longest expected pulse is the maximal base pulse-width of all your protocols multiplied by 34
+
 #define MIN_PULSELENGTH 10			// tested to work down to 30us pulsewidth (=2)
 #define MAX_PULSELENGTH 1600
 
