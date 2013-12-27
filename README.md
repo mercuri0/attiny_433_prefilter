@@ -36,7 +36,7 @@ Additional info:
 
 ###Pinout:
 
-![Schematic](/schematic_1.png_ "Schematic")
+![Schematic](/mercuri0/attiny_433_prefilter/schematic_1.png_ "Schematic")
 
 |  Name  | Raspberry Pi V2 | Attiny45 | 433 Receiver|
 |--------|-----------------|----------|-------------|
