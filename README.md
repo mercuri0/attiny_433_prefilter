@@ -36,8 +36,6 @@ Additional info:
 
 ###Pinout:
 
-![Schematic](schematic_1.png "Schematic")
-
 |  Name  | Raspberry Pi V2 | Attiny45 | 433 Receiver|
 |--------|-----------------|----------|-------------|
 |  MOSI  |       19        |    5     |      -      |
