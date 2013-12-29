@@ -36,7 +36,7 @@ Additional info:
 
 ###Pinout:
 	
-the first schematic protects your raspberry a little bit more, if you think it's needed use this one, i use the second one.
+the first schematic protects your raspberry a little bit more, if you think it's needed use this one, i use the second one without resistors. if you want you can even power the attiny with 3.3V, it works, but i think the timing is less accurate.
 	![Schematic](schematic_git.png "Schematic")
 	![Minimalistic schematic](schematic_minimal_git.png "Minimalistic schematic")
 
