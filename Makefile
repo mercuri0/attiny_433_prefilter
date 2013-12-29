@@ -1,10 +1,9 @@
-TARGET=433_prefilter
+TARGET=433_prefilter_v1
 
 MCU=attiny45
 AVRDUDEMCU=t45
 CC=/usr/bin/avr-gcc
 CFLAGS= -mmcu=$(MCU) -DF_CPU=16000000UL
-LDFLAGS= -mmcu=$(MCU) -DF_CPU=16000000UL
 OBJ2HEX=/usr/bin/avr-objcopy
 AVRDUDE=avrdude
 
@@ -16,10 +15,20 @@ compile :
 	$(CC) $(CFLAGS) -o $(TARGET).elf $(TARGET).o
 	$(OBJ2HEX) -j .text -j .data -O ihex $(TARGET).elf $(TARGET).hex
 
+program_wd : $(TARGET)_wd.hex
+	sudo $(AVRDUDE) -p $(AVRDUDEMCU) -P gpio -c gpio -b 10000 -U flash:w:$(TARGET)_wd.hex
+
+compile_wd :
+	$(CC) $(CFLAGS) -c $(TARGET)_wd.c
+	$(CC) $(CFLAGS) -o $(TARGET)_wd.elf $(TARGET)_wd.o
+	$(OBJ2HEX) -j .text -j .data -O ihex $(TARGET)_wd.elf $(TARGET)_wd.hex
+
 clean :
 	rm -f *.hex *.obj *.o *.elf
 
 all: clean compile erase program
+
+all_wd: clean compile_wd erase_wd program_wd
 
 ############################## ATTiny25/45/85 ###############################
 #	http://www.engbedded.com/fusecalc/
@@ -44,5 +53,9 @@ all: clean compile erase program
 # lfuse:w:0xe1:m = 16MHz internal pll clock
 #
 erase:
+	# 16 MHz:
 	$(AVRDUDE) -p $(AVRDUDEMCU) -P gpio -c gpio -e -U lfuse:w:0xe1:m -U hfuse:w:0xdf:m
-	#$(AVRDUDE) -p $(AVRDUDEMCU) -P gpio -c gpio -e -U lfuse:w:0x62:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
+
+erase_wd:
+	# 16 MHz, Watchdot enabled, Brown out 1.8V:
+	$(AVRDUDE) -p $(AVRDUDEMCU) -P gpio -c gpio -e -U lfuse:w:0xe1:m -U hfuse:w:0xce:m -U efuse:w:0xff:m
