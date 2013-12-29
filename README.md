@@ -35,6 +35,10 @@ Additional info:
 	http://www.engbedded.com/fusecalc/
 
 ###Pinout:
+	
+the first schematic protects your raspberry a little bit more, if you think it's needed use this one, i use the second one.
+	![Schematic](schematic_git.png "Schematic")
+	![Minimalistic schematic](schematic_minimal_git.png "Minimalistic schematic")
 
 |  Name  | Raspberry Pi V2 | Attiny45 | 433 Receiver|
 |--------|-----------------|----------|-------------|
